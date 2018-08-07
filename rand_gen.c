@@ -20,7 +20,7 @@ int isIn(int num, int* arr, int n) {
 	return 0;
 }
 
-int* gen_random(int *arr, int n, int m) {
+int* generate_random_from_array(int *arr, int n, int m) {
 	srand(time(NULL));
 	int *indices = malloc(m * sizeof(int));
 	int *ret_arr = malloc(m * sizeof(int));
