@@ -54,11 +54,12 @@ int main() {
 		.n = n,
 	};
 	pthread_t thread_id;
-	thread_create(&thread_id, NULL, common_buf_insert, );
-	thread_create(&thread_id, NULL, common_buf_remove, NULL);
-	while(true) {
-
-	}
+	pthread_t thread_id2;
+	
+	pthread_create(&thread_id, NULL, common_buf_insert, NULL);
+	pthread_create(&thread_id2, NULL, common_buf_remove, NULL);
+	pthread_join(thread_id, NULL);
+	pthread_join(thread_id2, NULL);
 
 	return 0;
 }
