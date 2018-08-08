@@ -7,12 +7,10 @@ int cmp_func(const char* a, const char* b) {
 }
 
 void swap(char **arr, int i, int j) {
-    char *temp = strdup(arr[i]);
-    free(arr[i]);
+    char *temp = arr[i];
     arr[i] = strdup(arr[j]);
     free(arr[j]);
     arr[j] = strdup(temp);
-    free(temp);
 }
 
 int partition(char **arr, int p, int r, 
@@ -64,6 +62,10 @@ int main() {
     for (int i = 0; i < n; ++i) {
         printf("%s\n", arr[i]);
     }
+
+    for (int i= 0; i < n; ++i) {
+        free(arr[i]);
+    }
+
     return 0;
 }
-
