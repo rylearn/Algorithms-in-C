@@ -19,17 +19,17 @@ void print_addr(Address* p) {
 
 void f() {
 	Address jd;
-	jd.name = "Jim Dandy";
-	jd.number = 61;
+	jd.name = "John Smith";
+	jd.number = 52;
 	printf("%s\n", jd.name);
 }
 
 int main() {
 	Address jd = {
-		"Jim Dandy",
-		61, "South St",
-		"New Providence",
-		{'N', 'J'}, "07974"
+		"John Smith",
+		52, "Sample St",
+		"New City",
+		{'N', 'J'}, "72974"
 	};
 	printf("%d\n", jd.number);
 	print_addr(&jd);
