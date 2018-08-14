@@ -60,6 +60,8 @@ int main() {
 	pthread_create(&thread_id2, NULL, common_buf_remove, NULL);
 	pthread_join(thread_id, NULL);
 	pthread_join(thread_id2, NULL);
+	
+	free(arr);
 
 	return 0;
 }
