@@ -8,6 +8,7 @@ int cmp_func(const char* a, const char* b) {
 
 void swap(char **arr, int i, int j) {
     char *temp = arr[i];
+    free(arr[i]);
     arr[i] = strdup(arr[j]);
     free(arr[j]);
     arr[j] = strdup(temp);
