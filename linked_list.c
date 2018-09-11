@@ -1,6 +1,4 @@
-//
-// Created by Stanley Jacob on 9/10/18.
-//
+
 #include <stdlib.h>
 #include <stdio.h>
 
